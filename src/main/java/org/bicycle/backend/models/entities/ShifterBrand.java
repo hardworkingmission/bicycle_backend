@@ -10,20 +10,17 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tblcomment")
-public class Comment{
+@Table(name = "tblshifterbrand")
+public class ShifterBrand {
+
     @Id
-    @Column(name = "cmnt_id")
+    @Column(name = "sbnd_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "cmnt_comment")
-    private  String comment;
-    @Column(name = "cmnt_item_id")
-    private  long itemId;
-
-    @Column(name = "cmnt_user_id")
-    private  long userId;
-
+    @Column(name = "sbnd_name")
+    private String name;
+    @Column(name = "sbnd_description")
+    private String description;
 
 }
