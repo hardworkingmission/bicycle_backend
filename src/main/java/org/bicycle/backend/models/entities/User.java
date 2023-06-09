@@ -1,6 +1,7 @@
 package org.bicycle.backend.models.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder(setterPrefix = "set")
 @Table(name = "tbluser")
 public class User {
     @Id

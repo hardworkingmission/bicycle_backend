@@ -1,6 +1,7 @@
 package org.bicycle.backend.models.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tblcomment")
+@Builder(setterPrefix = "set")
 public class Comment{
     @Id
     @Column(name = "cmnt_id")

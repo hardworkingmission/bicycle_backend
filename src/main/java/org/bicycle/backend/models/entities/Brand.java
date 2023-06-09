@@ -1,6 +1,7 @@
 package org.bicycle.backend.models.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tblbrand")
+@Builder(setterPrefix = "set")
 public class Brand {
 
     @Id
@@ -20,6 +22,7 @@ public class Brand {
 
     @Column(name = "bnd_name")
     private String name;
+
     @Column(name = "bnd_description")
     private String description;
 
